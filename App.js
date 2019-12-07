@@ -6,15 +6,20 @@
 */
 
 import {createStackNavigator,createAppContainer} from 'react-navigation';
-import PhoneCover from './src/PhoneCover';
-import SelectModel from './src/SelectModel';
-import CustomedCategory from './src/CustomedCategory';
-import CoverEditor from './src/CoverEditor';
-import BGColorPicker from './src/BGColorPicker';
-import AddText from './src/AddText';
-import SelectSticker from './src/SelectSticker';
-import PhoneCase from './src/PhoneCase';
-import {YellowBox} from 'react-native';
+import PhoneCover from './src/screens/PhoneCover';
+import SelectModel from './src/screens/SelectModel';
+import CustomedCategory from './src/screens/CustomedCategory';
+import CoverEditor from './src/screens/CoverEditor';
+import BGColorPicker from './src/screens/BGColorPicker';
+import FontColorPicker from './src/screens/FontColorPicker';
+import AddText from './src/screens/AddText';
+import SelectSticker from './src/screens/SelectSticker';
+import StickerItems from './src/screens/StickerItems';
+import PhoneCase from './src/screens/PhoneCase';
+import AddBGImage from './src/screens/AddBGImage';
+import CartScreen from './src/cart/CartScreen';
+import CheckOut from './src/cart/CheckOut';
+import { YellowBox } from 'react-native';
 
 //import all the screens we are going to switch 
 const App = createStackNavigator({
@@ -25,7 +30,12 @@ const App = createStackNavigator({
     BGColorPicker: {screen: BGColorPicker},
     AddText: {screen: AddText},
     SelectSticker: {screen: SelectSticker},
-    PhoneCase: {screen: PhoneCase}
+    StickerItems: {screen: StickerItems},
+    PhoneCase: {screen: PhoneCase},
+    AddBGImage: {screen: AddBGImage},
+    FontColorPicker: {screen: FontColorPicker},
+    Cart: { screen: CartScreen },
+    CheckOut: { screen: CheckOut }
   },
   {
     initialRouteName: 'PhoneCover',

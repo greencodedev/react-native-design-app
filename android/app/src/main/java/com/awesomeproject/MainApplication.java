@@ -3,11 +3,12 @@ package com.awesomeproject;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.reactnative.maskedview.RNCMaskedViewPackage;
+import fr.greweb.reactnativeviewshot.RNViewShotPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.horcrux.svg.SvgPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
-import org.reactnative.maskedview.RNCMaskedViewPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -28,11 +29,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNCMaskedViewPackage(),
+            new RNViewShotPackage(),
             new VectorIconsPackage(),
             new SvgPackage(),
             new ImagePickerPackage(),
-            new RNGestureHandlerPackage(),
-            new RNCMaskedViewPackage()
+            new RNGestureHandlerPackage()
       );
     }
 
